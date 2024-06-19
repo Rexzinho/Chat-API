@@ -1,0 +1,17 @@
+{
+  "name": "chatapi",
+  "version": "1.0.0",
+  "description": "Trabalho do segundo trimestre de criação de sites onde será criado um chat",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vinícius Sorgetz Alves",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.7.0"
+  }
+}
