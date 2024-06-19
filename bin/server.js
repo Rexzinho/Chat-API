@@ -8,4 +8,4 @@ const port = process.env.API_PORT;
 
 app.listen(port, () => {
     console.log("Servidor rodando na porta " + port);
-})
+});

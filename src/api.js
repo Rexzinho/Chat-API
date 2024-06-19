@@ -5,6 +5,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 const router = express.Router();
+
 app.use("/", router.get("/", (req, res) => {
     res.status(200).send("<h1>API CHAT</h1>");
 }));
@@ -15,6 +16,12 @@ app.use("/", router.get("/sobre", (req, res) => {
         "versão": "0.1.0",
         "autor": "Vinícius Sorgetz Alves"
     })
-}))
+}));
+
+app.use("/", router.get("/salas", async (req, res, next) => {
+    const salaController = require("./controllers/salaController");
+    const resp = await salaController.get();
+    res.status(200).json(resp);
+}));
 
 module.exports = app;
